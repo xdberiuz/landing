@@ -67,7 +67,6 @@ yourDiv.addEventListener("transitionend", transitionEndHandler);
 const itemsBackground = document.querySelectorAll(
   ".security__wrapper .bg_items"
 );
-console.log(itemsBackground);
 
 // Получаем высоту видимой области браузера
 const windowHeight = window.innerHeight;
@@ -94,36 +93,6 @@ const handleScroll = () => {
 
 // Добавляем обработчик события scroll
 window.addEventListener("scroll", handleScroll);
-
-//client slider
-document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".slider");
-  const slides = document.querySelectorAll(".slide");
-  const cloneSlides = Array.from(slides).map((slide) => slide.cloneNode(true));
-
-  slider.append(...cloneSlides);
-
-  function nextSlide() {
-    const currentIndex = -slider.scrollLeft / slides[0].offsetWidth;
-    const nextIndex = (currentIndex + 1) % slides.length;
-
-    if (nextIndex === 0) {
-      slider.scrollLeft = 0;
-      slides[0].remove();
-    }
-
-    slider.scroll({
-      left: nextIndex * slides[0].offsetWidth,
-      behavior: "smooth",
-    });
-  }
-
-  // Задайте интервал времени в миллисекундах
-  const interval = 3000;
-
-  // Запуск автоматического переключения слайдов
-  const intervalId = setInterval(nextSlide, interval);
-});
 
 //faq toogle
 document.addEventListener("DOMContentLoaded", function () {
