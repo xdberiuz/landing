@@ -503,6 +503,10 @@
   display: none;
 }
 
+.mob__items {
+  display: none;
+}
+
 @media (max-width: 1340px) {
   .title__btn {
     max-width: 100%;
@@ -511,6 +515,18 @@
 }
 
 @media (max-width: 1239px) {
+  .title__rigth .wrapper {
+    margin-bottom: 35px;
+  }
+
+  .desktop__items {
+    display: none;
+  }
+
+  .mob__items {
+    display: flex;
+  }
+
   .title__rigth .wrapper .title {
     padding-left: 0;
   }
