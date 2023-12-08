@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="./src/fontawesome/css/brands.min.css" />
     <link rel="stylesheet" href="./src/fontawesome/css/solid.min.css" />
     <!-- /fontawesome -->
+    <link rel="stylesheet" href="./src/styles/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./src/styles/slick/slick.css" />
     <title>Арт-Офіс</title>
   </head>
   <body>
+    <div class="overlay"></div>
     <header class="header">
       <div class="header__wrapper">
         <div class="header__logo">
@@ -23,7 +26,9 @@
             <li class="nav-list__item"><a href="#advantage">Переваги</a></li>
             <li class="nav-list__item"><a href="#solution">Рішення</a></li>
             <li class="nav-list__item"><a href="#corporation">Модулі</a></li>
-            <li class="nav-list__item"><a href="#workwith">Робота з документами</a></li>
+            <li class="nav-list__item">
+              <a href="#workwith">Робота з документами</a>
+            </li>
             <li class="nav-list__item"><a href="#security">Безпека</a></li>
             <li class="nav-list__item"><a href="#faq">FAQ</a></li>
             <li class="nav-list__item"><a href="#contacts">Контакти</a></li>
@@ -143,7 +148,6 @@
         </div>
         <div class="title__img"></div>
       </div>
-      
     </div>
     <div class="advantage__section" id="advantage">
       <div class="section__name">
@@ -307,7 +311,8 @@
       </div>
       <div class="corporation__wrapper">
         <h2 class="section__title">
-          «&nbsp;Арт-Офіс <span class="italic">Корпоративне рішення</span>&nbsp;»
+          «&nbsp;Арт-Офіс
+          <span class="italic">Корпоративне рішення</span>&nbsp;»
         </h2>
         <h3 class="section__subtitle">
           Це сучасне, зручне і надійне рішення для бізнесу
@@ -495,7 +500,6 @@
                 <img src="./src/img/content_2.png" alt="Формати документів" />
               </div>
               <ul>
-                
                 <li>
                   CadES X Long (для довгострокового і архівного зберігання
                   документів);
@@ -520,7 +524,6 @@
                 <img src="./src/img/content_3.png" alt="Формати документів" />
               </div>
               <ul>
-               
                 <li>
                   <b>Гнучкі сценарії</b> підписання та погодження внутрішніх
                   документів;
@@ -569,13 +572,8 @@
                   Додавання до документа спеціальних міток підписів з
                   реквізитами підписантів;
                 </li>
-                <li>
-                  Архівне зберігання, пошук, коментування
-                  документів;
-                </li>
-                <li>
-                  Встановлення зв’язків між документами;
-                </li>
+                <li>Архівне зберігання, пошук, коментування документів;</li>
+                <li>Встановлення зв’язків між документами;</li>
                 <li>
                   Експорт ZIP-архіву підписаного документу для подальшої
                   перевірки підписів на сайті
@@ -733,6 +731,170 @@
           <div class="foruse__item icon orange_union">
             <img src="./src/img/svg/gift.svg" alt="gift" />
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="feedback__section">
+      <div class="wrapper dark__background">
+        <div class="section__name">
+          <h2>про нас говорять</h2>
+        </div>
+        <h2 class="section__title dark_bc_color">
+          <img src="./src/img/feedback_1.png" alt="Відгуки клієнтів">
+          <img src="./src/img/feedback_2.png" alt="Відгуки клієнтів">
+          <img src="./src/img/feedback_3.png" alt="Відгуки клієнтів">
+          <img src="./src/img/svg/feedback_line.svg" alt="Відгуки клієнтів">
+          <img src="./src/img/feedback_5.png" alt="Відгуки клієнтів">
+          <img src="./src/img/feedback_6.png" alt="Відгуки клієнтів">
+          <img src="./src/img/svg/feedback_line.svg" alt="Відгуки клієнтів">
+          <img src="./src/img/feedback_like.png" alt="Відгуки клієнтів">
+          <span class="italic">Відгуки </span>клієнтів
+        </h2>
+      </div>
+      <div class="feedback_items">
+        <div class="prev">
+          <img src="./src/img/svg/arrow_rigth.svg" alt="Назад">
+        </div>
+        <div class="slider single-item">
+          <div class="feedback__item">
+            <div class="top__content">
+              <div class="logo">
+                <img src="" alt="" />
+              </div>
+              <div class="about_company">
+                <h3 class="name">Наталія Алексєєва</h3>
+                <span class="name_company">Директор ТОВ «ІМР»</span>
+              </div>
+              <div class="public__date">18.05.2023</div>
+            </div>
+            <div class="mid__content">
+              <p class="halfReview">
+                Одним з напрямків діяльності ТОВ «Інститут місцевого розвитку»
+                (ІМР) є проведення навчальних заходів, які з 2020 р.
+                відбуваються переважно онлайн, що передбачає обмін документами з
+                контрагентами поштою (під час офлайн-заходів все можна...
+              </p>
+            </div>
+            <div class="bottom__content" onclick="openModal(0)">
+              <span>Читати більше</span>
+              <div class="more__btn">
+                <img src="./src/img/svg/arrow_rigth.svg" alt="Читати більше" />
+              </div>
+            </div>
+          </div>
+          <div class="feedback__item">
+            <div class="top__content">
+              <div class="logo">
+                <img src="" alt="" />
+              </div>
+              <div class="about_company">
+                <h3 class="name">Вікторія Синиця</h3>
+                <span class="name_company"
+                  >Операційна директорка компанії Kompas Україна</span
+                >
+              </div>
+              <div class="public__date">22.09.2020</div>
+            </div>
+            <div class="mid__content">
+              <p class="halfReview">
+                Обираючи сервіс електронного документообігу, ми шукали, щоб
+                функціональність була широкою та зручною, а також, щоб було
+                забезпечено високий рівень надійності та безпеки конфіденційної
+                інформації. Щоб...
+              </p>
+            </div>
+            <div class="bottom__content" onclick="openModal(1)">
+              <span>Читати більше</span>
+              <div class="more__btn">
+                <img src="./src/img/svg/arrow_rigth.svg" alt="Читати більше" />
+              </div>
+            </div>
+          </div>
+          <div class="feedback__item">
+            <div class="top__content">
+              <div class="logo">
+                <img src="" alt="" />
+              </div>
+              <div class="about_company">
+                <h3 class="name">Тетяна Ткачук</h3>
+                <span class="name_company">Юрист компанії ZEO Alliance</span>
+              </div>
+              <div class="public__date">25.08.2020</div>
+            </div>
+            <div class="mid__content">
+              <p class="halfReview">
+                «Електронний документообіг в сервісі Арт‑Офіс, особливо в умовах
+                карантину, це зручно та ефективно. А головне - документи,
+                створені та підписані в «Арт‑Офіс», є юридично значущими, їх
+                приймають у податковій службі та інших державних...
+              </p>
+            </div>
+            <div class="bottom__content" onclick="openModal(2)">
+              <span>Читати більше</span>
+              <div class="more__btn">
+                <img src="./src/img/svg/arrow_rigth.svg" alt="Читати більше" />
+              </div>
+            </div>
+          </div>
+          <div class="feedback__item">
+            <div class="top__content">
+              <div class="logo">
+                <img src="" alt="" />
+              </div>
+              <div class="about_company">
+                <h3 class="name">Олег Пикар</h3>
+                <span class="name_company"
+                  >Директор департаменту якості ЄВРАЗІЯ в PSA Group</span
+                >
+              </div>
+              <div class="public__date">02.05.2019</div>
+            </div>
+            <div class="mid__content">
+              <p class="halfReview">
+                Рішення «Арт‑Офіс» дозволило нам автоматизувати процес обміну
+                документами між компанією та дилерами. Ми керувалися тим, що
+                рішення повинно бути хмарним з можливістю авторизуватися в
+                кабінеті з ключем КЕП, правила...
+              </p>
+            </div>
+            <div class="bottom__content" onclick="openModal(3)">
+              <span>Читати більше</span>
+              <div class="more__btn">
+                <img src="./src/img/svg/arrow_rigth.svg" alt="Читати більше" />
+              </div>
+            </div>
+          </div>
+          <div class="feedback__item">
+            <div class="top__content">
+              <div class="logo">
+                <img src="" alt="" />
+              </div>
+              <div class="about_company">
+                <h3 class="name">Микола Курус</h3>
+                <span class="name_company"
+                  >Program manager at Finance Information Systems</span
+                >
+              </div>
+              <div class="public__date">17.04.2019</div>
+            </div>
+            <div class="mid__content">
+              <p class="halfReview">
+                При виборі системи електронного документообігу компанія
+                керувалася загальною стратегією розвитку, цілями, наявним
+                конкуруючим середовищем, бажаною структурою та очікуваним
+                економічним ефектом від впровадження...
+              </p>
+            </div>
+            <div class="bottom__content" onclick="openModal(4)">
+              <span>Читати більше</span>
+              <div class="more__btn">
+                <img src="./src/img/svg/arrow_rigth.svg" alt="Читати більше" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="next">
+          <img src="./src/img/svg/arrow_rigth.svg" alt="Вперед">
         </div>
       </div>
     </div>
@@ -999,17 +1161,27 @@
         </div>
         <nav class="footer__navigation">
           <ul class="footer-nav-list">
-            <li class="footer-nav-list__item"><a href="#advantage">Переваги</a></li>
-            <li class="footer-nav-list__item"><a href="#solution">Рішення</a></li>
-            <li class="footer-nav-list__item"><a href="#corporation">Модулі</a></li>
+            <li class="footer-nav-list__item">
+              <a href="#advantage">Переваги</a>
+            </li>
+            <li class="footer-nav-list__item">
+              <a href="#solution">Рішення</a>
+            </li>
+            <li class="footer-nav-list__item">
+              <a href="#corporation">Модулі</a>
+            </li>
             <li class="footer-nav-list__item">
               <a href="#workwith">Робота з документами</a>
             </li>
           </ul>
           <ul class="footer-nav-list">
-            <li class="footer-nav-list__item"><a href="#security">Безпека</a></li>
+            <li class="footer-nav-list__item">
+              <a href="#security">Безпека</a>
+            </li>
             <li class="footer-nav-list__item"><a href="#faq">FAQ</a></li>
-            <li class="footer-nav-list__item"><a href="#contacts">Контакти</a></li>
+            <li class="footer-nav-list__item">
+              <a href="#contacts">Контакти</a>
+            </li>
           </ul>
         </nav>
         <div class="footer__social">
@@ -1047,6 +1219,12 @@
         </ul>
       </div>
     </footer>
+    <script src="./src/js/jquery/jquery.min.js"></script>
+    <script src="./src/js/slick/slick.min.js"></script>
     <script src="./src/js/main.js"></script>
+    <div id="modal">
+      <div id="modal-content"></div>
+      <div class="close-btn" onclick="closeModal()">&times;</div>
+    </div>
   </body>
 </html>
