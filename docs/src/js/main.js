@@ -94,50 +94,7 @@ const handleScroll = () => {
 // Добавляем обработчик события scroll
 window.addEventListener("scroll", handleScroll);
 
-//faq toogle
-document.addEventListener("DOMContentLoaded", function () {
-  const items = document.querySelectorAll(".faq__item");
 
-  items.forEach(function (item) {
-    const title = item.querySelector(".content__title");
-    const answer = item.querySelector(".content__answer");
-    const controller = item.querySelector(".content__controller");
-    const arrowImage = controller.querySelector("img");
-
-    title.addEventListener("click", function () {
-      if (answer.style.maxHeight) {
-        // Если ответ уже открыт, закрыть его и сменить изображение на обычное
-        answer.style.maxHeight = null;
-        title.classList.remove("opened");
-        arrowImage.src = "./src/img/svg/faq_arrow.svg";
-      } else {
-        // Закрыть все ответы и открыть текущий, добавив класс opened и сменить изображение на активное
-        closeAllAnswers();
-        answer.style.maxHeight = answer.scrollHeight + "px";
-        title.classList.add("opened");
-        arrowImage.src = "./src/img/svg/faq_arrow_active.svg";
-      }
-    });
-  });
-
-  function closeAllAnswers() {
-    const answers = document.querySelectorAll(".content__answer");
-    answers.forEach(function (answer) {
-      answer.style.maxHeight = null;
-    });
-
-    const titles = document.querySelectorAll(".content__title");
-    titles.forEach(function (title) {
-      title.classList.remove("opened");
-    });
-
-    const controllers = document.querySelectorAll(".content__controller");
-    controllers.forEach(function (controller) {
-      const arrowImage = controller.querySelector("img");
-      arrowImage.src = "./src/img/svg/faq_arrow.svg";
-    });
-  }
-});
 
 //expml work
 document.addEventListener("DOMContentLoaded", function () {
