@@ -1,0 +1,113 @@
+@import url("../../src/styles/common-styles.css");
+@import url("../../src/styles/fonts.css");
+@import url("../../src/styles/common-styles.css");
+@import url("../../src/styles/fonts.css");
+
+.section__policy {
+    width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.section__policy .wrapper {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 15px;
+}
+
+.policy__title {
+    font-family: "InterTight-Regular", sans-serif;
+    color: #000e1f;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.policy__subtitle {
+    font-family: "InterTight-Regular", sans-serif;
+    color: #000e1f;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 35px;
+}
+
+.policy-content__title {
+    font-family: "InterTight-Regular", sans-serif;
+    color: #333e4c;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin: 20px 0;
+}
+
+.policy__text, li {
+    font-family: "InterTight-Regular", sans-serif;
+    color: #333e4c;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    overflow-wrap: anywhere;
+}
+
+.policy__text a,
+.policy__content li a {
+    color: #0000ee !important;
+}
+
+.policy__content ul, .policy__content ol {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.policy__content ul,
+.policy__content ol {
+    margin-left: 25px;
+}
+
+.policy__content ul {
+list-style: disc;
+}
+
+.policy__content ol {
+list-style: auto;
+}
+
+
+@media (max-width: 1239px) {
+    .policy__title {
+        font-size: 35px;
+    }
+
+    .policy__subtitle,
+    .policy-content__title{
+        font-size: 16px;
+    }
+
+    .policy__text, li  {
+        font-size: 14px;
+    }
+}
