@@ -2640,8 +2640,12 @@
 }
 
 @media (max-width: 430px) {
-  .try__wrapper .bg_items {
-    display: none !important;
+  .try__wrapper {
+    padding: 150px 10px 0 10px;
+  }
+
+  .try__section {
+    padding-top: 45px;
   }
 }
 
