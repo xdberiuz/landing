@@ -99,7 +99,8 @@ window.addEventListener("scroll", handleScroll);
 //expml work
 document.addEventListener("DOMContentLoaded", function () {
   const workWithItems = document.querySelectorAll(".workwith__item");
-  const rightImages = document.querySelectorAll(".workwith__rigth img");
+  const rightImages = document.querySelectorAll(".workwith__rigth .workwith__expml-img");
+  const rightSubImages = document.querySelectorAll(".workwith__rigth .subimage__wrapper ");
 
   workWithItems.forEach((item, index) => {
     const contentTitle = item.querySelector(".content__title");
@@ -113,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (otherItem !== item) {
           otherItem.classList.remove("active");
           rightImages[otherIndex].classList.remove("active");
+          rightSubImages[otherIndex].classList.remove("active");
           otherItem.querySelector(".content__text").style.maxHeight = "0";
           otherItem.querySelector("img").src = `./src/img/svg/faq_arrow.svg`;
         } else {
@@ -122,6 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ? contentText.scrollHeight + "px"
             : "0";
           rightImages[index].classList.add("active");
+          rightSubImages[index].classList.add("active");
         }
       });
     });

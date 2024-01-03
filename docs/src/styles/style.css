@@ -238,7 +238,7 @@
   .title__rigth .wrapper .title {
     padding-left: 0;
   }
-  .title__left .title__img .exmpl_img{
+  .title__left .title__img .exmpl_img {
     display: none;
   }
 
@@ -1305,6 +1305,78 @@
   padding-left: 50px;
 }
 
+.workwith__rigth .subimage__wrapper {
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+}
+
+.workwith__rigth .subimage__wrapper.active {
+  opacity: 1;
+}
+
+.workwith__rigth .subimage__wrapper .icon {
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 34px;
+  z-index: 1;
+  position: absolute;
+}
+
+.workwith__rigth .subimage__wrapper .icon img {
+}
+
+.workwith__rigth .subimage__wrapper .icon.green_union {
+  background-image: url(../img/svg/green_union.svg);
+}
+.workwith__rigth .subimage__wrapper .icon.blue_union {
+  background-image: url(../img/svg/union.svg);
+}
+
+.workwith__rigth .subimage__wrapper.index_1 .icon.green_union {
+  bottom: 60px;
+}
+
+.workwith__rigth .subimage__wrapper.index_1 .icon.blue_union {
+  left: 635px;
+  top: 255px;
+}
+
+.workwith__rigth .subimage__wrapper.index_2 .icon.green_union {
+  bottom: 45px;
+  left: 95px;
+}
+
+.workwith__rigth .subimage__wrapper.index_3 .icon {
+  border-radius: 50%;
+  background-color: #0169e4;
+  top: 100px;
+  left: 150px;
+}
+
+.workwith__rigth .subimage__wrapper.index_4 .icon.green_union {
+  top: 60px;
+  left: 595px;
+  background-color: unset;
+  border-radius: unset;
+}
+
+.workwith__rigth .subimage__wrapper.index_4 .icon {
+  border-radius: 50%;
+  background-color: #0169e4;
+  bottom: 73px;
+  left: 75px;
+}
+
 .workwith__section .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1475,7 +1547,7 @@
   overflow: hidden;
 }
 
-.workwith__rigth img {
+.workwith__rigth .workwith__expml-img {
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in;
   -o-transition: opacity 0.3s ease-in;
@@ -1483,7 +1555,7 @@
   position: absolute;
 }
 
-.workwith__rigth img.active {
+.workwith__rigth .workwith__expml-img.active {
   opacity: 1;
   width: 650px;
   -webkit-animation: fade 0.8s ease;
@@ -1491,7 +1563,60 @@
 }
 
 .workwith__left .workwith__item .content__text div {
+  position: relative;
   display: none;
+  background-color: #e6f0fc;
+  border-radius: 8px;
+}
+
+.workwith__left .workwith__item .content__text div .icon {
+  width: 30px;
+  height: 30px;
+  background-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 34px;
+  z-index: 1;
+  position: absolute;
+}
+
+.workwith__left .workwith__item .content__text div .icon img {
+  width: 20px;
+}
+
+.workwith__left .workwith__item .content__text div.index_2 .icon.green_union {
+  background-image: url(../img/svg/green_union.svg);
+  bottom: 10px;
+  left: 24%;
+  transform: translate(20px, -50%);
+}
+
+.workwith__left .workwith__item .content__text div.index_3 .icon {
+  background-color: #0169e4;
+  border-radius: 50%;
+  top: -10px;
+  left: 25%;
+}
+
+.workwith__left .workwith__item .content__text div.index_4 .icon.green_union {
+  background-image: url(../img/svg/green_union.svg);
+  top: -4px;
+  left: 25%;
+}
+
+.workwith__left .workwith__item .content__text div.index_4 .icon {
+  background-color: #0169e4;
+  border-radius: 50%;
+  bottom: 10px;
+  left: 24%;
+  transform: translate(20px, -50%);
 }
 
 .workwith__left .workwith__item .content__text ul .line:nth-child(1)::before {
@@ -1522,7 +1647,7 @@
   }
 }
 
-@media (max-width: 1239px) {
+@media (max-width: 1420px) {
   .workwith__rigth {
     display: none;
   }
@@ -1570,6 +1695,28 @@
     width: 30px;
     height: 30px;
     background-size: 30px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .workwith__left .workwith__item .content__text div.index_2 .icon.green_union,
+  .workwith__left .workwith__item .content__text div.index_4 .icon  {
+    left: 15%;
+  }
+}
+
+@media (max-width: 800px) {
+  .workwith__left .workwith__item .content__text div.index_2 .icon.green_union,
+  .workwith__left .workwith__item .content__text div.index_4 .icon  {
+    left: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .workwith__left .workwith__item .content__text div.index_2 .icon.green_union,
+  .workwith__left .workwith__item .content__text div.index_4 .icon  {
+    left: 0%;
+    bottom: -25px;
   }
 }
 
