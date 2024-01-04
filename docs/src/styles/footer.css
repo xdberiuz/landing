@@ -172,7 +172,6 @@
 .footer_link-policy {
   position: relative;
   margin: 0 10px;
-
 }
 
 .footer_link-policy a::after {
@@ -305,3 +304,31 @@
 }
 
 /* /footer */
+
+/* fix hover effect */
+@media (hover: none) {
+  .footer_link-policy:hover a::after {
+    width: 0%;
+  }
+  .footer_link-policy:hover a {
+    color: var(--footer_policy);
+  }
+  .social-links .social-link:hover {
+    background-color: transparent;
+  }
+  .footer-nav-list__item:hover a {
+    color: var(--footer_color);
+  }
+  .footer_link-policy:hover a::after {
+    width: 0%;
+  }
+  .footer-nav-list__item:hover a::after {
+    width: 0%;
+  }
+  .social-links .social-link:hover {
+    color: var(--header_active);
+  }
+  .social-link:hover {
+    border-color: #d3e1e8;
+  }
+}

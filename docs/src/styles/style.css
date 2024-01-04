@@ -1938,6 +1938,10 @@
   margin-bottom: 12px;
 }
 
+.security__item .content__list-item a {
+  color: #8c8cff !important;
+}
+
 .security__item .content__list-item::before {
   content: "";
   position: absolute;
@@ -3174,3 +3178,38 @@
 }
 
 /* /section contacts */
+/* fix hover effect */
+@media (hover: none) {
+  .title__btn:hover,
+  .corporation__btn:nth-child(2):hover,
+  .workwith__btns a:nth-child(2):hover,
+  .try__btn:nth-child(1) {
+    background-color: #e44501;
+    color: #fff;
+    border-color: transparent;
+  }
+  .title__btn:last-child:hover,
+  .corporation__btn:hover,
+  .workwith__btns a:hover  {
+   color: #000e1f;
+   border-color: #000e1f;
+   background-color: #fff;
+  }
+
+  .solution__item .content__bottom .content__link a:hover .link__arrow {
+    background-color: #e44501;
+  }
+
+  .try__btn:nth-child(2):hover {
+    color: #f9fbfe;
+    border-color: #f9fbfe;
+    background-color: #000e1f;
+  }
+
+  .contact__item .item__content ul li:hover a, .contact__item:nth-child(2) .item__content:hover a {
+    color: #000e1f;
+  }
+  .contact__item .item__content ul li:hover a::after, .contact__item:nth-child(2) .item__content:hover a::after {
+    width: 0%;
+  }
+}

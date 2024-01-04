@@ -298,3 +298,22 @@
   }
 }
 /* /Header Section */
+
+/* fix hover effect */
+@media (hover: none) {
+  .nav-list__item:hover a {
+    color: var(--header_color);
+  }
+  .nav-list__item:hover::after {
+    width: 0%;
+  }
+  .social-link:hover {
+    color: rgba(6, 6, 64, 1);
+  }
+  .mobile-nav__item:hover a {
+    color:var(--header_color);
+  }
+  .mobile-nav__item:hover a::after {
+    width: 0%;
+  }
+}
