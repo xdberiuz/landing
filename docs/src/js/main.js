@@ -94,13 +94,15 @@ const handleScroll = () => {
 // Добавляем обработчик события scroll
 window.addEventListener("scroll", handleScroll);
 
-
-
 //expml work
 document.addEventListener("DOMContentLoaded", function () {
   const workWithItems = document.querySelectorAll(".workwith__item");
-  const rightImages = document.querySelectorAll(".workwith__rigth .workwith__expml-img");
-  const rightSubImages = document.querySelectorAll(".workwith__rigth .subimage__wrapper ");
+  const rightImages = document.querySelectorAll(
+    ".workwith__rigth .workwith__expml-img"
+  );
+  const rightSubImages = document.querySelectorAll(
+    ".workwith__rigth .subimage__wrapper "
+  );
 
   workWithItems.forEach((item, index) => {
     const contentTitle = item.querySelector(".content__title");
@@ -230,7 +232,9 @@ function closeModal() {
 }
 
 const feedbackSection = document.querySelector(".feedback__section");
-const feedbackBgItems = feedbackSection.querySelectorAll(".wrapper.dark__background h2 img");
+const feedbackBgItems = feedbackSection.querySelectorAll(
+  ".wrapper.dark__background h2 img"
+);
 
 function showFeedbackBgItems(index) {
   setTimeout(function () {
@@ -238,16 +242,113 @@ function showFeedbackBgItems(index) {
   }, index * 200);
 }
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      for (let i = 0; i < feedbackBgItems.length; i++) {
-        showFeedbackBgItems(i);
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        for (let i = 0; i < feedbackBgItems.length; i++) {
+          showFeedbackBgItems(i);
+        }
+        // Отключаем наблюдение после первого появления
+        observer.disconnect();
       }
-      // Отключаем наблюдение после первого появления
-      observer.disconnect();
-    }
-  });
-}, { threshold: 0.2 });
+    });
+  },
+  { threshold: 0.2 }
+);
 
 observer.observe(feedbackSection);
+
+// help modal
+
+const helpModal = document.querySelector("#help");
+function openHelpModal() {
+  const overlay = document.querySelector(".overlay");
+  overlay.style.display = "block";
+  overlay.style.zIndex = "1";
+  helpModal.style.zIndex = "2";
+  helpModal.style.display = "block";
+}
+
+function closeHelpModal() {
+  helpModal.style.display = "none";
+  const overlay = document.querySelector(".overlay");
+  overlay.style.display = "none";
+  overlay.style.zIndex = "-99";
+}
+
+var phoneInput = document.getElementById("phone");
+
+if (phoneInput) {
+  phoneInput.addEventListener(
+    "focus",
+    function () {
+      if (!phoneInput.value.startsWith("+380")) {
+        phoneInput.value = "+380" + phoneInput.value;
+      }
+    },
+    { once: true }
+  );
+}
+
+
+
+const submitForm = async () => {
+  const errorMsg = document.querySelector('.error_msg');
+  const successMsg = document.querySelector('.success_msg'); // Добавлено для вывода сообщения об успешной отправке
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+
+  if (name.length < 2 || !/^[а-яА-ЯЁё'\-\s]+$/.test(name)) {
+    errorMsg.textContent = 'Поле "Ім\'я" некоректно заповнено';
+    return;
+  }
+
+  if (phone.length === 0) {
+    errorMsg.textContent = 'Поле "Телефон" має бути заповненим';
+    return;
+  }
+
+  if ((phone.startsWith("+") && phone.length !== 13) ||
+      (phone.startsWith("3") && phone.length !== 12) ||
+      (phone.startsWith("0") && phone.length < 9)) {
+    errorMsg.textContent = 'Поле "Телефон" некоректно заповнено';
+    return;
+  }
+
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  if (!emailRegex.test(email)) {
+    errorMsg.textContent = 'Поле "Електронна пошта" некоректно заповнено';
+    return;
+  }
+
+  try {
+    // Отправка формы на сервер с использованием Fetch API
+    const response = await fetch('/submit.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&email=${encodeURIComponent(email)}`,
+    });
+
+    const result = await response.text();
+
+    // Проверка ответа от сервера
+    if (result === 'success') {
+      // Успешная отправка формы
+      errorMsg.textContent = ''; // Очистка сообщения об ошибке
+      successMsg.textContent = 'Форма успешно отправлена!'; // Вывод сообщения об успешной отправке
+    } else {
+      // Ошибка отправки формы
+      successMsg.textContent = ''; // Очистка сообщения об успешной отправке
+      errorMsg.textContent = 'Ошибка при отправке формы. Попробуйте еще раз.'; // Вывод сообщения об ошибке
+    }
+  } catch (error) {
+    console.error('Произошла ошибка:', error);
+    errorMsg.textContent = 'Произошла ошибка. Попробуйте еще раз.';
+  }
+};
+
