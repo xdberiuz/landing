@@ -3,53 +3,35 @@ const menu = document.querySelector(".mobile-nav");
 const menuItem = document.querySelectorAll(".mobile-nav__list li a");
 let menuOpen = false;
 
-//toogle burger menu
 menuBtn.addEventListener("click", () => {
-  if (!menuOpen) {
-    menuBtn.classList.add("open");
-    menu.classList.add("open");
-    menuOpen = true;
-    menuItem.forEach((item, index) => {
-      setTimeout(() => {
-        item.style.transform = "translateX(0px)";
-      }, index * 40);
-    });
-  } else {
-    menu.classList.remove("open");
-    menuBtn.classList.remove("open");
-    menuOpen = false;
-    menuItem.forEach((item) => {
-      item.style.transform = "translateX(-190px)";
-    });
-  }
+  menuBtn.classList.toggle("open");
+  menu.classList.toggle("open");
+  menuOpen = !menuOpen;
+
+  menuItem.forEach((item, index) => {
+    setTimeout(() => {
+      item.style.transform = menuOpen ? "translateX(0px)" : "translateX(-190px)";
+    }, index * 40);
+  });
 });
 
-//title users
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const corpUsers = document.querySelectorAll(".corp_user");
 
-  // Функция для добавления класса show с задержкой
-  function showCorpUsersWithDelay(index) {
-    setTimeout(function () {
+  const showCorpUsersWithDelay = (index) => {
+    setTimeout(() => {
       corpUsers[index].classList.add("show");
-    }, index * 200); // Измените задержку по своему усмотрению (500 миллисекунд в данном примере)
-  }
+    }, index * 200);
+  };
 
-  // Проходим по всем элементам corp_user и добавляем классы с задержкой
-  for (let i = 0; i < corpUsers.length; i++) {
-    showCorpUsersWithDelay(i);
-  }
+  corpUsers.forEach((_, index) => showCorpUsersWithDelay(index));
 });
 
-//line security
 const yourDiv = document.querySelector(".secutiry__level .line__progress");
-const progressTitle = document.querySelector(
-  ".secutiry__level .line__progress .line__point .line__text"
-);
+const progressTitle = document.querySelector(".secutiry__level .line__progress .line__point .line__text");
 
 const transitionEndHandler = () => {
-  let progress =
-    (yourDiv.offsetWidth / yourDiv.parentElement.offsetWidth) * 100;
+  const progress = (yourDiv.offsetWidth / yourDiv.parentElement.offsetWidth) * 100;
 
   if (progress >= 61) {
     yourDiv.classList.add("progress-50");
@@ -62,36 +44,25 @@ const transitionEndHandler = () => {
 
 yourDiv.addEventListener("transitionend", transitionEndHandler);
 
-//add class when block on user screen
-// Получаем элемент, к которому хотим добавить класс
-const itemsBackground = document.querySelectorAll(
-  ".security__wrapper .bg_items"
-);
-
-// Получаем высоту видимой области браузера
+const itemsBackground = document.querySelectorAll(".security__wrapper .bg_items");
 const windowHeight = window.innerHeight;
 
-// Функция для проверки, находится ли элемент в видимой области
-const isElementInViewport = (el) => {
-  const rect = el.getBoundingClientRect();
-  return rect.top < windowHeight;
-};
+const isElementInViewport = (el) => el.getBoundingClientRect().top < windowHeight;
 
-// Функция для добавления класса при прокрутке
 const handleScroll = () => {
   if (isElementInViewport(yourDiv)) {
     yourDiv.classList.add("active");
+
     itemsBackground.forEach((item, index) => {
       setTimeout(() => {
         item.style.opacity = "0.7";
       }, index * 200);
     });
-    // Если нужно выполнить действие только один раз после прокрутки, можно убрать обработчик события
+
     window.removeEventListener("scroll", handleScroll);
   }
 };
 
-// Добавляем обработчик события scroll
 window.addEventListener("scroll", handleScroll);
 
 //expml work
