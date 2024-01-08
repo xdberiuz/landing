@@ -3275,6 +3275,17 @@
   margin-bottom: 10px;
 }
 
+.status_msg {
+  font-family: "InterTight-Regular";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  color: #00a74e;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 1239px) {
   .help__title {
     font-size: 19px;

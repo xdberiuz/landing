@@ -291,11 +291,10 @@ if (phoneInput) {
   );
 }
 
-
-
-const submitForm = async () => {
-  const errorMsg = document.querySelector('.error_msg');
-  const successMsg = document.querySelector('.success_msg'); // Добавлено для вывода сообщения об успешной отправке
+async function submitForm(event) {
+  event.preventDefault();
+  const errorMsg = document.querySelector(".error_msg");
+  const statusMsg = document.querySelector(".status_msg"); // Добавлено для вывода сообщения об успешной отправке
 
   const name = document.getElementById("name").value;
   const phone = document.getElementById("phone").value;
@@ -311,9 +310,11 @@ const submitForm = async () => {
     return;
   }
 
-  if ((phone.startsWith("+") && phone.length !== 13) ||
-      (phone.startsWith("3") && phone.length !== 12) ||
-      (phone.startsWith("0") && phone.length < 9)) {
+  if (
+    (phone.startsWith("+") && phone.length !== 13) ||
+    (phone.startsWith("3") && phone.length !== 12) ||
+    (phone.startsWith("0") && phone.length < 9)
+  ) {
     errorMsg.textContent = 'Поле "Телефон" некоректно заповнено';
     return;
   }
@@ -323,32 +324,31 @@ const submitForm = async () => {
     errorMsg.textContent = 'Поле "Електронна пошта" некоректно заповнено';
     return;
   }
-
   try {
-    // Отправка формы на сервер с использованием Fetch API
-    const response = await fetch('/submit.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: `name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&email=${encodeURIComponent(email)}`,
+    // Формируем запрос
+    const response = await fetch(event.target.action, {
+      method: "POST",
+      body: new FormData(event.target),
     });
-
-    const result = await response.text();
-
-    // Проверка ответа от сервера
-    if (result === 'success') {
-      // Успешная отправка формы
-      errorMsg.textContent = ''; // Очистка сообщения об ошибке
-      successMsg.textContent = 'Форма успешно отправлена!'; // Вывод сообщения об успешной отправке
+    // проверяем, что ответ есть
+    console.log(response)
+    if (!response.ok)
+      throw `Помилка під час звернення до сервера: ${response.status}`;
+    // проверяем, что ответ действительно JSON
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw "Помилка обробки.";
+    }
+    // обрабатываем запрос
+    const json = await response.json();
+    if (json.result === "success") {
+      statusMsg.textContent = 'Заявку успішно надіслано!';
     } else {
-      // Ошибка отправки формы
-      successMsg.textContent = ''; // Очистка сообщения об успешной отправке
-      errorMsg.textContent = 'Ошибка при отправке формы. Попробуйте еще раз.'; // Вывод сообщения об ошибке
+      errorMsg.textContent = 'Помилка під час надсилання форми. Спробуйте пізніше ще раз.';
+      throw json.info;
     }
   } catch (error) {
-    console.error('Произошла ошибка:', error);
-    errorMsg.textContent = 'Произошла ошибка. Попробуйте еще раз.';
+    errorMsg.textContent = error
+    console.log(error);
   }
-};
-
+}

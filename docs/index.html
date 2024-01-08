@@ -352,7 +352,7 @@
                 </p>
               </div>
             </div>
-            <div class="content__bottom">
+            <!-- <div class="content__bottom">
               <div class="content__link">
                 <a href="#">
                   Про можливості 
@@ -364,7 +364,7 @@
                   </span>
                 </a>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="solution__item">
             <div class="content__top">
@@ -383,7 +383,7 @@
               </div>
             </div>
             <div class="content__bottom">
-              <div class="content__link">
+              <!-- <div class="content__link">
                 <a href="#" target="_blank">
                   Дізнатися більше 
                   <span class="link__arrow">
@@ -393,7 +393,7 @@
                     />
                   </span>
                 </a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -1322,7 +1322,7 @@
       <div class="close-btn" onclick="closeModal()">&times;</div>
     </div>
     <div id="help">
-      <form action="/submit" method="post" id="help_form">
+      <form action="./send.php" enctype="multipart/form-data" method="post" id="help_form" onsubmit="submitForm(event)">
         <div class="close-btn" onclick="closeHelpModal()">×</div>
         <h3 class="help__title">Виникли питання?</h3>
         <p class="help__text">
@@ -1343,9 +1343,8 @@
           placeholder="Електронна пошта:"
         />
         <div class="error_msg"></div>
-        <button type="button" class="submit-btn" onclick="submitForm()">
-          Відправити
-        </button>
+        <div class="status_msg"></div>
+        <input value="Відправити" type="submit" class="submit-btn">
       </form>
     </div>
     <script src="./src/js/jquery/jquery.min.js"></script>
