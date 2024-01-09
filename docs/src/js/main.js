@@ -302,7 +302,6 @@ async function submitForm(event) {
       body: new FormData(event.target),
     });
     // проверяем, что ответ есть
-    console.log(response)
     if (!response.ok)
       throw `Помилка під час звернення до сервера: ${response.status}`;
     // проверяем, что ответ действительно JSON
