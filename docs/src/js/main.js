@@ -320,6 +320,5 @@ async function submitForm(event) {
     }
   } catch (error) {
     errorMsg.textContent = error
-    console.log(error);
   }
 }
