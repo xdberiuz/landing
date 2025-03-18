@@ -71,13 +71,15 @@ $('.url').click(function () {
 //share Telegram
 
 $('.share_social .tm').click(function () {
-  let fullLink = URL_SHARE_TELEGRAM + window.location.href
+  // let fullLink = URL_SHARE_TELEGRAM + window.location.href
+  let fullLink = URL_SHARE_TELEGRAM;
   window.open(fullLink, '_blank').focus();
 })
 
 //share FB
 
 $('.share_social .fb').click(function () {
-  let fullLink = URL_SHAER_FACEBOOK + window.location.href
+  // let fullLink = URL_SHAER_FACEBOOK + window.location.href
+  let fullLink = URL_SHAER_FACEBOOK ;
   window.open(fullLink, '_blank').focus();
 })
