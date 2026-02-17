@@ -3143,7 +3143,7 @@
 }
 
 .achievements__section {
-    padding-top: 10px;
+    padding-top: 35px;
 }
 
 .achievements__section .wrapper {
@@ -3152,10 +3152,29 @@
 }
 
 .achievements__content {
-    margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.achievements__items {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.achievements__items .section__name {
+    width: fit-content;
+    min-width: unset;
+}
+
+.achievements__year {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .achievements__img {
@@ -3171,6 +3190,12 @@
 
     .achievements__img {
         margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 660px) {
+    .achievements__year {
+        flex-direction: column;
     }
 }
 
