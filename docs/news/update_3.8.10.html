@@ -2,16 +2,17 @@
 <html lang="en">
 
 <head>
+  <base href="/landing/docs/">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../src/styles/reset.css" />
-  <link rel="stylesheet" href="../src/styles/header.css" />
-  <link rel="stylesheet" href="../src/styles/footer.css" />
-  <link rel="stylesheet" href="./styles/news_page.css" />
+  <link rel="stylesheet" href="src/styles/reset.css" />
+  <link rel="stylesheet" href="src/styles/header.css" />
+  <link rel="stylesheet" href="src/styles/footer.css" />
+  <link rel="stylesheet" href="news/styles/news_page.css" />
   <!-- fontawesome -->
-  <link rel="stylesheet" href="../src/fontawesome/css/fontawesome.min.css" />
-  <link rel="stylesheet" href="../src/fontawesome/css/brands.min.css" />
-  <link rel="stylesheet" href="../src/fontawesome/css/solid.min.css" />
+  <link rel="stylesheet" href="src/fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="src/fontawesome/css/brands.min.css" />
+  <link rel="stylesheet" href="src/fontawesome/css/solid.min.css" />
   <!-- /fontawesome -->
   <meta name="description"
     content="Цікава та корисна інформація про створення, перевірку та обмін електронними документами з індивідуальними та корпоративними рішеннями Арт-Офіс." />
@@ -22,102 +23,21 @@
   <meta property="og:description"
     content="Цікава та корисна інформація про створення, перевірку та обмін електронними документами з індивідуальними та корпоративними рішеннями Арт-Офіс." />
   <meta property="og:site_name" content="Арт-Офіс – Офіційний сайт" />
-  <meta property="og:image" content="../src/img/svg/AO_logo.svg" />
+  <meta property="og:image" content="src/img/svg/AO_logo.svg" />
   <meta property="og:image:width" content="145" />
   <meta property="og:image:height" content="60" />
-  <link rel="shortcut icon" href="../src/img/logo_ao.ico" type="image/x-icon" />
-  <title>Оновлення «Арт-Офіс» до версії 3.8.9</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <title>Оновлення «Арт-Офіс» до версії 3.8.10</title>
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__wrapper">
-      <div class="header__logo">
-        <a href="../index.html">
-          <img src="../src/img/svg/AO_logo.svg" alt="Арт-Офіс" /></a>
-      </div>
-      <nav class="header__nav">
-        <ul class="nav-list">
-          <li class="nav-list__item">
-            <a href="../index.html#advantage">Переваги</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="../index.html#solution">Рішення</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="../index.html#corporation">Модулі</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="../index.html#workwith">Робота з документами</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="../index.html#security">Безпека</a>
-          </li>
-          <li class="nav-list__item">
-            <a href="../index.html#contacts">Контакти</a>
-          </li>
-          <li class="nav-list__item"><a href="../index.html#achievements">Нагороди та сертифікати</a></li>
-
-          <li class="nav-list__item"><a href="../news.html">Новини</a></li>
-        </ul>
-      </nav>
-      <div class="header__social">
-        <a href="https://t.me/art_office" target="_blank" class="social-link">
-          <i class="fa-brands fa-telegram"></i>
-        </a>
-        <a href="https://www.facebook.com/art.office.com.ua/" target="_blank" class="social-link">
-          <i class="fa-brands fa-square-facebook"></i>
-        </a>
-        <a href="https://www.youtube.com/@Art-Office" target="_blank" class="social-link">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </div>
-      <div class="mobile-btn">
-        <span class="mobile-btn__burger"></span>
-      </div>
-      <div class="mobile-nav">
-        <ul class="mobile-nav__list">
-          <li class="mobile-nav__item">
-            <a href="../index.html#advantage">Переваги</a>
-          </li>
-          <li class="mobile-nav__item">
-            <a href="../index.html#solution">Рішення</a>
-          </li>
-          <li class="mobile-nav__item">
-            <a href="../index.html#corporation">Модулі</a>
-          </li>
-          <li class="mobile-nav__item">
-            <a href="../index.html#workwith">Робота з документами</a>
-          </li>
-          <li class="mobile-nav__item">
-            <a href="../index.html#security">Безпека</a>
-          </li>
-          <li class="mobile-nav__item">
-            <a href="../index.html#contacts">Контакти</a>
-          </li>
-          <li class="mobile-nav__item"><a href="../index.html#achievements">Нагороди та сертифікати</a></li>
-          <li class="mobile-nav__item"><a href="../news.html">Новини</a></li>
-        </ul>
-        <div class="mobile__social">
-          <a href="https://t.me/art_office" target="_blank" class="social-link">
-            <i class="fa-brands fa-telegram"></i>
-          </a>
-          <a href="https://www.facebook.com/art.office.com.ua/" target="_blank" class="social-link">
-            <i class="fa-brands fa-square-facebook"></i>
-          </a>
-          <a href="https://www.youtube.com/@Art-Office" target="_blank" class="social-link">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div data-include="src/partials/header.html"></div>
   <div class="section_news">
     <div class="section_news-wrapper">
       <div class="news_content">
         <div class="news_wrapper">
           <div class="news_content-left">
-            <img src="../src/img/update_to_3_8_10.jpg" alt="Оновлення сервісу «Арт-Офіс» до версії 3.8.10"
+            <img src="src/img/update_to_3_8_10.jpg" alt="Оновлення сервісу «Арт-Офіс» до версії 3.8.10"
               title="Оновлення сервісу «Арт-Офіс» до версії 3.8.10" />
           </div>
           <div class="news_content-right">
@@ -329,89 +249,12 @@
       </div>
     </div>
   </div>
-  <footer class="footer">
-    <div class="footer__wrapper">
-      <div class="footer__logo-rights">
-        <div class="footer__logo">
-          <a href="../index.html"><img src="../src/img/svg/AO_logo.svg" alt="Арт-Офіс" /></a>
-        </div>
-        <div class="footer__rights">
-          © ТОВ «ДІСІЕНСІ», 2017-2025.
-          <br />
-          <br />
-          Усi права захищенi.
-          <br />
-          Розроблено в Україні
-        </div>
-      </div>
-      <nav class="footer__navigation">
-        <ul class="footer-nav-list">
-          <li class="footer-nav-list__item">
-            <a href="../index.html#advantage">Переваги</a>
-          </li>
-          <li class="footer-nav-list__item">
-            <a href="../index.html#solution">Рішення</a>
-          </li>
-          <li class="footer-nav-list__item">
-            <a href="../index.html#corporation">Модулі</a>
-          </li>
-          <li class="footer-nav-list__item">
-            <a href="../index.html#workwith">Робота з документами</a>
-          </li>
-        </ul>
-        <ul class="footer-nav-list">
-          <li class="footer-nav-list__item">
-            <a href="../index.html#security">Безпека</a>
-          </li>
-          <li class="footer-nav-list__item">
-            <a href="../index.html#contacts">Контакти</a>
-          </li>
-          <li class="footer-nav-list__item">
-            <a href="../news.html">Новини</a>
-          </li>
-          <li class="footer-nav-list__item"><a href="../index.html#achievements">Нагороди та сертифікати</a></li>
-        </ul>
-      </nav>
-      <div class="footer__social">
-        <h3 class="footer__social-title">Слідкуй за нами:</h3>
-        <div class="social-links">
-          <a href="https://t.me/art_office" target="_blank" class="social-link">
-            <i class="fa-brands fa-telegram"></i>
-          </a>
-          <a href="https://www.facebook.com/art.office.com.ua/" target="_blank" class="social-link">
-            <i class="fa-brands fa-square-facebook"></i>
-          </a>
-          <a href="https://www.youtube.com/@Art-Office" target="_blank" class="social-link">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </div>
-      </div>
-      <div class="footer__rights mob">
-        © ТОВ «ДІСІЕНСІ», 2017-2025.
-        <br />
-        <br />
-        Усi права захищенi.
-        <br />
-        Розроблено в Україні
-      </div>
-    </div>
-    <div class="footer__line"></div>
-    <div class="footer__wrapper policy">
-      <ul class="footer_links-policy">
-        <li class="footer_link-policy">
-          <a href="../policy/securitypolicy.html">Політика безпеки</a>
-        </li>
-        <li class="footer_link-policy">
-          <a href="../policy/privacypolicy.html">Політика конфіденційності</a>
-        </li>
-        <li class="footer_link-policy">
-          <a href="../policy/cookiespolicy.html">Політика Cookie</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-  <script src="../src/js/jquery/jquery.min.js"></script>
-  <script src="../news/js/share_links.js"></script>
+  <div data-include="src/partials/footer.html"></div>
+  <script src="src/js/jquery/jquery.min.js"></script>
+  <script src="news/js/share_links.js"></script>
+  <script src="src/js/include.js"></script>
+  <script src="src/js/header.js"></script>
+  <script src="src/js/footer.js"></script>
 </body>
 
 </html>
