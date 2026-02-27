@@ -147,6 +147,19 @@ function initPhoneMaskBehavior() {
   );
 }
 
+function faqToggle() {
+  document.querySelectorAll('.section_faq-question').forEach((el) => {
+    el.addEventListener('click', () => {
+      el.classList.toggle('active');
+
+      const next = el.nextElementSibling;
+      if (next && next.classList.contains('section_faq-answer')) {
+        next.classList.toggle('active');
+      }
+    });
+  });
+}
+
 function initAll() {
   initCorpUsers();
   initSecurityProgress();
@@ -154,6 +167,7 @@ function initAll() {
   initSlick();
   initFeedbackObserver();
   initPhoneMaskBehavior();
+  faqToggle()
 }
 
 
