@@ -1,0 +1,1 @@
+["curYear","curYear-mob"].forEach(e=>{const r=document.getElementById(e);r&&(r.innerHTML=(new Date).getFullYear())});
