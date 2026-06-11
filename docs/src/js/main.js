@@ -262,16 +262,16 @@ if (phoneInput) {
   );
 }
 
-function getYear() {
-    const date = new Date();
-    return date.getFullYear();
-    }
+// function getYear() {
+//     const date = new Date();
+//     return date.getFullYear();
+//     }
 
 // Target an HTML element to display the current date and time
-const yyyy = document.getElementById("curYear");
+// const yyyy = document.getElementById("curYear");
 
 // Set the innerHTML of the element to the current date and time returned by the function
-yyyy.innerHTML = getYear();
+// yyyy.innerHTML = getYear();
 
 // async function submitForm(event) {
 //   event.preventDefault();
