@@ -2,34 +2,35 @@
 <html lang="en">
 
 <head>
-  <base href="/landing/">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="src/styles/reset.css" />
-  <link rel="stylesheet" href="src/styles/header.css" />
-  <link rel="stylesheet" href="src/styles/footer.css" />
-  <link rel="stylesheet" href="src/styles/style.css" />
+  <link rel="stylesheet" href="./src/styles/reset.css" />
+  <link rel="stylesheet" href="./src/styles/header.css" />
+  <link rel="stylesheet" href="./src/styles/footer.css" />
+  <link rel="stylesheet" href="./src/styles/style.css" />
   <!-- fontawesome -->
-  <link rel="stylesheet" href="src/fontawesome/css/fontawesome.min.css" />
-  <link rel="stylesheet" href="src/fontawesome/css/brands.min.css" />
-  <link rel="stylesheet" href="src/fontawesome/css/solid.min.css" />
+  <link rel="stylesheet" href="./src/fontawesome/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="./src/fontawesome/css/brands.min.css" />
+  <link rel="stylesheet" href="./src/fontawesome/css/solid.min.css" />
   <!-- /fontawesome -->
   <!-- slider -->
-  <link rel="stylesheet" href="src/styles/slick/slick-theme.css" />
-  <link rel="stylesheet" href="src/styles/slick/slick.css" />
+  <link rel="stylesheet" href="./src/styles/slick/slick-theme.css" />
+  <link rel="stylesheet" href="./src/styles/slick/slick.css" />
   <!-- /slider -->
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
   <meta name="description"
     content="Арт-Офіс - програмні продукти для створення, перевірки та обміну електронними документами, юридично значимими в Україні. Підходить як для ФОП, так і для великих корпорацій." />
   <meta name="keywords"
     content="хмарний сервіс Арт-Офіс, електронний документообіг в Україні, документообіг на підприємстві, система електронного документообігу, організація електронного документообігу, системи електронного документообігу в Україні, зберігання електронних документів, електронний документообіг програми, електронна система документообігу" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="./src/img/logo_ao.ico" type="image/x-icon" />
   <meta property="og:url" content="./" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Арт-Офіс | Головна" />
   <meta property="og:description"
     content="Арт-Офіс - програмні продукти для створення, перевірки та обміну електронними документами, юридично значимими в Україні. Підходить як для ФОП, так і для великих корпорацій." />
   <meta property="og:site_name" content="Арт-Офіс" />
-  <meta property="og:image" content="src/img/svg/AO_logo.svg" />
+  <meta property="og:image" content="./src/img/svg/AO_logo.svg" />
   <meta property="og:image:width" content="145" />
   <meta property="og:image:height" content="60" />
   <title>Арт-Офіс</title>
@@ -37,7 +38,68 @@
 
 <body>
   <div class="overlay"></div>
-  <div data-include="src/partials/header.html"></div>
+  <header class="header">
+    <div class="header__wrapper">
+      <div class="header__logo">
+        <img src="./src/img/svg/AO_logo.svg" alt="Арт-Офіс" />
+      </div>
+      <nav class="header__nav">
+        <ul class="nav-list">
+          <li class="nav-list__item"><a href="#advantage">Переваги</a></li>
+          <li class="nav-list__item"><a href="#solution">Рішення</a></li>
+          <li class="nav-list__item"><a href="#corporation">Модулі</a></li>
+          <li class="nav-list__item"><a href="#licensing">Ліцензування</a></li>
+          <li class="nav-list__item">
+            <a href="#workwith">Робота з документами</a>
+          </li>
+          <li class="nav-list__item"><a href="#security">Безпека</a></li>
+          <li class="nav-list__item"><a href="#contacts">Контакти</a></li>
+          <li class="nav-list__item"><a href="#achievements">Нагороди та сертифікати</a></li>
+          <li class="nav-list__item"><a href="./news.html">Новини</a></li>
+        </ul>
+      </nav>
+      <div class="header__social">
+        <a href="https://t.me/art_office" target="_blank" class="social-link">
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="https://www.facebook.com/art.office.com.ua/" target="_blank" class="social-link">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="https://www.youtube.com/@Art-Office" target="_blank" class="social-link">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+      </div>
+      <div class="mobile-btn">
+        <span class="mobile-btn__burger"></span>
+      </div>
+      <div class="mobile-nav">
+        <ul class="mobile-nav__list">
+          <li class="mobile-nav__item"><a href="#advantage">Переваги</a></li>
+          <li class="mobile-nav__item"><a href="#solution">Рішення</a></li>
+          <li class="mobile-nav__item"><a href="#corporation">Модулі</a></li>
+          <li class="mobile-nav__item"><a href="#licensing">Ліцензування</a></li>
+          <li class="mobile-nav__item">
+            <a href="#workwith">Робота з документами</a>
+          </li>
+          <li class="mobile-nav__item"><a href="#security">Безпека</a></li>
+          <li class="mobile-nav__item"><a href="#contacts">Контакти</a></li>
+          <li class="mobile-nav__item"><a href="#achievements">Нагороди та сертифікати</a></li>
+          <li class="mobile-nav__item"><a href="./news.html">Новини</a></li>
+        </ul>
+        <div class="mobile__social">
+          <a href="https://t.me/art_office" target="_blank" class="social-link">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://www.facebook.com/art.office.com.ua/" target="_blank" class="social-link">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <a href="https://www.youtube.com/@Art-Office" target="_blank" class="social-link">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
   <div class="title__section">
     <div class="title__btns mob__items">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6Sa_9LnXK4X3CdVMtqkvRodRkJnlW63WBN9iuTmgqMciHhQ/viewform"
@@ -48,7 +110,7 @@
     </div>
     <div class="title__left">
       <div class="title__img ser">
-        <img class="exmpl_img" src="src/img/svg/title_exmpl.svg" alt="Система обміну
+        <img class="exmpl_img" src="./src/img/svg/title_exmpl.svg" alt="Система обміну
         електронними документами" />
         <h3>
           Сервіс побудовано на основі класичної клієнт-серверної архітектури
@@ -62,7 +124,7 @@
           </div>
           <div class="user__profile">
             <div class="user__photo">
-              <img src="src/img/user_4.png" alt="Користувач" />
+              <img src="./src/img/user_4.png" alt="Користувач" />
             </div>
             <div class="user__content">
               <span class="line"></span>
@@ -77,10 +139,10 @@
         <div class="content">
           <div class="title__img">
             <div class="bg_items">
-              <img src="src/img/svg/doc.svg" alt="DOC" />
+              <img src="./src/img/svg/doc.svg" alt="DOC" />
             </div>
             <div class="bg_items">
-              <img src="src/img/svg/zip.svg" alt="ZIP" />
+              <img src="./src/img/svg/zip.svg" alt="ZIP" />
             </div>
           </div>
         </div>
@@ -94,13 +156,13 @@
         <div class="subtitle">
           <div class="corp_users">
             <div class="corp_user">
-              <img src="src/img/user_1.png" alt="корпоративні клієнти" />
+              <img src="./src/img/user_1.png" alt="корпоративні клієнти" />
             </div>
             <div class="corp_user">
-              <img src="src/img/user_2.png" alt="корпоративні клієнти" />
+              <img src="./src/img/user_2.png" alt="корпоративні клієнти" />
             </div>
             <div class="corp_user">
-              <img src="src/img/user_3.png" alt="корпоративні клієнти" />
+              <img src="./src/img/user_3.png" alt="корпоративні клієнти" />
             </div>
           </div>
           <h2>
@@ -135,7 +197,7 @@
       <div class="advantage__items">
         <div class="advantage__item">
           <div class="content__icon">
-            <img src="src/img/svg/faders.svg" loading="lazy" alt="Гнучке управління" />
+            <img src="./src/img/svg/faders.svg" loading="lazy" alt="Гнучке управління" />
           </div>
           <div class="content__title">
             <h4>Гнучке управління</h4>
@@ -144,13 +206,13 @@
             <p>доступом до документів завдяки розмежуванню прав у системі</p>
           </div>
           <div class="arrow__line">
-            <img src="src/img/svg/arrow_line.svg" loading="lazy" alt="Arrow Line" />
+            <img src="./src/img/svg/arrow_line.svg" loading="lazy" alt="Arrow Line" />
           </div>
         </div>
         <div class="advantage__item"></div>
         <div class="advantage__item">
           <div class="content__icon">
-            <img src="src/img/svg/filetype.svg" loading="lazy" alt="Оптимізація витрат і ресурсу" />
+            <img src="./src/img/svg/filetype.svg" loading="lazy" alt="Оптимізація витрат і ресурсу" />
           </div>
           <div class="content__title">
             <h4>Оптимізація витрат і ресурсу</h4>
@@ -164,7 +226,7 @@
         </div>
         <div class="advantage__item">
           <div class="content__icon">
-            <img src="src/img/svg/userfocus.svg" loading="lazy" alt="Гнучке управління" />
+            <img src="./src/img/svg/userfocus.svg" loading="lazy" alt="Гнучке управління" />
           </div>
           <div class="content__title">
             <h4>Персональний менеджер</h4>
@@ -185,10 +247,10 @@
     </div>
     <div class="solution__wrapper">
       <div class="bg_items">
-        <img src="src/img/paper_sheet.png" loading="lazy" alt="Електронний документообіг" />
+        <img src="./src/img/paper_sheet.png" loading="lazy" alt="Електронний документообіг" />
       </div>
       <div class="bg_items">
-        <img src="src/img/pile_of_papers.png" loading="lazy" alt="Електронний документообіг" />
+        <img src="./src/img/pile_of_papers.png" loading="lazy" alt="Електронний документообіг" />
       </div>
       <h2 class="section__title dark_bc_color">
         Електронний <span class="italic">документообіг</span>
@@ -223,7 +285,7 @@
               <a href="https://my.art-office.com.ua/" target="_blank">
                 Дізнатися більше
                 <span class="link__arrow">
-                  <img src="src/img/svg/arrow_rigth.svg" loading="lazy" alt="Дізнатися більше" />
+                  <img src="./src/img/svg/arrow_rigth.svg" loading="lazy" alt="Дізнатися більше" />
                 </span>
               </a>
             </div>
@@ -253,7 +315,7 @@
                   Про можливості 
                   <span class="link__arrow">
                     <img
-                      src="src/img/svg/arrow_rigth.svg"
+                      src="./src/img/svg/arrow_rigth.svg"
                       alt="Дізнатися більше"
                     />
                   </span>
@@ -283,7 +345,7 @@
                   Дізнатися більше 
                   <span class="link__arrow">
                     <img
-                      src="src/img/svg/arrow_rigth.svg"
+                      src="./src/img/svg/arrow_rigth.svg"
                       alt="Дізнатися більше"
                     />
                   </span>
@@ -316,7 +378,7 @@
             <div class="content">
               <div class="content__title">
                 <span class="content__icon">
-                  <img src="src/img/svg/chart_polar.svg" loading="lazy" alt="Фінансовий моніторинг" />
+                  <img src="./src/img/svg/chart_polar.svg" loading="lazy" alt="Фінансовий моніторинг" />
                 </span>
                 <h4>Фінансовий моніторинг</h4>
               </div>
@@ -328,7 +390,7 @@
               </div>
             </div>
             <div class="content__img">
-              <img src="src/img/corporation_cabinet.png" loading="lazy" alt="Фінансовий моніторинг" />
+              <img src="./src/img/corporation_cabinet.png" loading="lazy" alt="Фінансовий моніторинг" />
             </div>
           </div>
         </div>
@@ -337,7 +399,7 @@
             <div class="content">
               <div class="content__title">
                 <span class="content__icon">
-                  <img src="src/img/svg/cloud_check.svg" loading="lazy" alt="Фінансовий моніторинг" />
+                  <img src="./src/img/svg/cloud_check.svg" loading="lazy" alt="Фінансовий моніторинг" />
                 </span>
                 <h4>Програмний API</h4>
               </div>
@@ -352,7 +414,7 @@
             <div class="content">
               <div class="content__title">
                 <span class="content__icon">
-                  <img src="src/img/svg/card_holder.svg" loading="lazy" alt="Фінансовий моніторинг" />
+                  <img src="./src/img/svg/card_holder.svg" loading="lazy" alt="Фінансовий моніторинг" />
                 </span>
                 <h4>Звітність</h4>
               </div>
@@ -369,7 +431,7 @@
             <div class="content">
               <div class="content__title">
                 <span class="content__icon">
-                  <img src="src/img/svg/chart_polar.svg" loading="lazy" alt="Фінансовий моніторинг" />
+                  <img src="./src/img/svg/chart_polar.svg" loading="lazy" alt="Фінансовий моніторинг" />
                 </span>
                 <h4>Фінансовий моніторинг</h4>
               </div>
@@ -381,7 +443,7 @@
               </div>
             </div>
             <div class="content__img">
-              <img src="src/img/corporation_cabinet.png" loading="lazy" alt="Фінансовий моніторинг" />
+              <img src="./src/img/corporation_cabinet.png" loading="lazy" alt="Фінансовий моніторинг" />
             </div>
           </div>
 
@@ -389,7 +451,7 @@
             <div class="content">
               <div class="content__title">
                 <span class="content__icon">
-                  <img src="src/img/svg/arrow_sln.svg" loading="lazy" alt="Фінансовий моніторинг" />
+                  <img src="./src/img/svg/arrow_sln.svg" loading="lazy" alt="Фінансовий моніторинг" />
                 </span>
                 <h4>Обмін внутрішніми документами</h4>
               </div>
@@ -405,7 +467,7 @@
             <div class="content">
               <div class="content__title">
                 <span class="content__icon">
-                  <img src="src/img/svg/arrow_out.svg" loading="lazy" alt="Фінансовий моніторинг" />
+                  <img src="./src/img/svg/arrow_out.svg" loading="lazy" alt="Фінансовий моніторинг" />
                 </span>
                 <h4>Обмін зовнішніми документами</h4>
               </div>
@@ -422,9 +484,116 @@
       <div class="corporation__btns">
         <a href="https://eguide.art-office.com.ua/" class="corporation__btn" target="_blank">Інструкція з
           використання</a>
-        <a href="src/files/Art-Office environment description.pdf" target="_blank" class="corporation__btn">Більше про
+        <a href="./src/files/Art-Office environment description.pdf" target="_blank" class="corporation__btn">Більше про
           технічні вимоги</a>
       </div>
+    </div>
+  </div>
+  <div class="licensing__section" id="licensing">
+    <div class="section__name">
+      <h2>Ліцензування</h2>
+    </div>
+    <div class="licensing__wrapper">
+      <h2 class="section__title">
+        Основні та <span class="italic">додаткові ліцензії</span>
+      </h2>
+      <h3 class="section__subtitle">
+        Виберіть основну ліцензію під ваш формат роботи — і розширюйте
+        функціональність за потребою через додаткові модулі.
+      </h3>
+
+      <div class="lic-table-wrap">
+        <table class="lic-table">
+          <colgroup>
+            <col class="lic-col-name" />
+            <col class="lic-col-type" />
+            <col class="lic-col-desc" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Назва ліцензії</th>
+              <th class="lic-th-type">Тип</th>
+              <th>Опис</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="lic-group-sep">
+              <td colspan="3">Основні ліцензії</td>
+            </tr>
+
+            <tr class="lic-row">
+              <td>
+                <span class="lic-name">Обмін зовнішніми документами</span>
+                <span class="lic-term">Строк дії: 12 місяців</span>
+              </td>
+              <td class="lic-td-type"><span class="lic-badge lic-badge--main">Основна</span></td>
+              <td class="lic-desc">Створення, підписання та обмін електронними документами між
+                контрагентами. Налаштування власних маршрутів обробки. Входить
+                до складу рішення ЗЕД/ВЕД.</td>
+            </tr>
+
+            <tr class="lic-row">
+              <td>
+                <span class="lic-name">Обмін внутрішніми електронними документами</span>
+                <span class="lic-term">Строк дії: 12 місяців</span>
+              </td>
+              <td class="lic-td-type"><span class="lic-badge lic-badge--main">Основна</span></td>
+              <td class="lic-desc">Створення, підписання та узгодження внутрішніх електронних
+                документів. Налаштування власних маршрутів обробки. Входить до
+                складу рішення ЗЕД/ВЕД.</td>
+            </tr>
+
+            <tr class="lic-group-sep">
+              <td colspan="3">Додаткові ліцензії</td>
+            </tr>
+
+            <tr class="lic-row">
+              <td>
+                <span class="lic-name">Фінансовий моніторинг</span>
+              </td>
+              <td class="lic-td-type"><span class="lic-badge lic-badge--add">Додаткова</span></td>
+              <td class="lic-desc">Автоматизація внутрішньої оцінки та верифікації контрагентів
+                при проведенні первинного фінансового моніторингу.</td>
+            </tr>
+
+            <tr class="lic-row">
+              <td>
+                <span class="lic-name">Звітність</span>
+              </td>
+              <td class="lic-td-type"><span class="lic-badge lic-badge--add">Додаткова</span></td>
+              <td class="lic-desc">Формування, підписання, камеральна перевірка та відправка
+                електронної звітності до ДПС України.</td>
+            </tr>
+
+            <tr class="lic-row">
+              <td>
+                <span class="lic-name">Модуль інтеграції та генерації документів з ERP Workday</span>
+              </td>
+              <td class="lic-td-type"><span class="lic-badge lic-badge--add">Додаткова</span></td>
+              <td class="lic-desc">Інтеграція системи електронного документообігу Арт-Офіс з
+                ERP-системою Workday: автоматична генерація та передача
+                документів між платформами.</td>
+            </tr>
+
+            <tr class="lic-row">
+              <td>
+                <span class="lic-name">Міжнародне електронне підписання — DocuSign та Дія.Підпис EU</span>
+              </td>
+              <td class="lic-td-type"><span class="lic-badge lic-badge--add">Додаткова</span></td>
+              <td class="lic-desc">Підписання документів з іноземними контрагентами за допомогою
+                DocuSign та Дія.Підпис EU. Відповідає вимогам міжнародного
+                електронного документообігу.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="lic-note">
+        <strong>Важливо:</strong> Ліцензіат отримує право на використання додаткових
+        ліцензій виключно як доповнення (розширення) до основної ліцензії. Додаткові
+        ліцензії не можуть використовуватися окремо та є функціонально залежними від
+        основної ліцензії.
+      </p>
     </div>
   </div>
   <div class="workwith__section" id="workwith">
@@ -442,12 +611,12 @@
           <div class="content__title">
             <h3><span class="title__count">(01)</span> Формати документів</h3>
             <div class="content__controller">
-              <img src="src/img/svg/faq_arrow_active.svg" loading="lazy" alt="faq_arrow" />
+              <img src="./src/img/svg/faq_arrow_active.svg" loading="lazy" alt="faq_arrow" />
             </div>
           </div>
           <div class="content__text">
             <div>
-              <img src="src/img/content_1.png" loading="lazy" alt="Формати документів" />
+              <img src="./src/img/content_1.png" loading="lazy" alt="Формати документів" />
             </div>
             <ul>
               <li>
@@ -461,15 +630,15 @@
           <div class="content__title">
             <h3><span class="title__count">(02)</span> Формати підписів</h3>
             <div class="content__controller">
-              <img src="src/img/svg/faq_arrow.svg" loading="lazy" alt="faq_arrow" />
+              <img src="./src/img/svg/faq_arrow.svg" loading="lazy" alt="faq_arrow" />
             </div>
           </div>
           <div class="content__text">
             <div class="index_2">
               <div class="icon green_union">
-                <img src="src/img/svg/pdf.svg" loading="lazy" alt="pdf" />
+                <img src="./src/img/svg/pdf.svg" loading="lazy" alt="pdf" />
               </div>
-              <img src="src/img/content_2.png" loading="lazy" alt="Формати документів" />
+              <img src="./src/img/content_2.png" loading="lazy" alt="Формати документів" />
             </div>
             <ul>
               <li>
@@ -488,15 +657,15 @@
               мітки підписів
             </h3>
             <div class="content__controller">
-              <img src="src/img/svg/faq_arrow.svg" loading="lazy" alt="faq_arrow" />
+              <img src="./src/img/svg/faq_arrow.svg" loading="lazy" alt="faq_arrow" />
             </div>
           </div>
           <div class="content__text">
             <div class="index_3">
               <div class="icon">
-                <img src="src/img/svg/docs.svg" loading="lazy" alt="docs" />
+                <img src="./src/img/svg/docs.svg" loading="lazy" alt="docs" />
               </div>
-              <img src="src/img/content_3.png" loading="lazy" alt="Формати документів" />
+              <img src="./src/img/content_3.png" loading="lazy" alt="Формати документів" />
             </div>
             <ul>
               <li>
@@ -528,18 +697,18 @@
               «Арт-офіс Корпоративне рішення»
             </h3>
             <div class="content__controller">
-              <img src="src/img/svg/faq_arrow.svg" loading="lazy" alt="faq_arrow" />
+              <img src="./src/img/svg/faq_arrow.svg" loading="lazy" alt="faq_arrow" />
             </div>
           </div>
           <div class="content__text">
             <div class="index_4">
               <div class="icon green_union">
-                <img src="src/img/svg/pdf.svg" loading="lazy" alt="pdf" />
+                <img src="./src/img/svg/pdf.svg" loading="lazy" alt="pdf" />
               </div>
               <div class="icon">
-                <img src="src/img/svg/docs.svg" loading="lazy" alt="docs" />
+                <img src="./src/img/svg/docs.svg" loading="lazy" alt="docs" />
               </div>
-              <img src="src/img/content_4.png" loading="lazy" alt="Формати документів" />
+              <img src="./src/img/content_4.png" loading="lazy" alt="Формати документів" />
             </div>
             <ul>
               <li>
@@ -567,35 +736,35 @@
       <div class="workwith__rigth">
         <div class="subimage__wrapper index_1 active">
           <div class="icon green_union">
-            <img src="src/img/svg/xls.svg" loading="lazy" alt="xls" />
+            <img src="./src/img/svg/xls.svg" loading="lazy" alt="xls" />
           </div>
           <div class="icon blue_union">
-            <img src="src/img/svg/pdf.svg" loading="lazy" alt="pdf" />
+            <img src="./src/img/svg/pdf.svg" loading="lazy" alt="pdf" />
           </div>
         </div>
-        <img class="workwith__expml-img active" src="src/img/content_1.png" loading="lazy" alt="Формати документів" />
+        <img class="workwith__expml-img active" src="./src/img/content_1.png" loading="lazy" alt="Формати документів" />
         <div class="subimage__wrapper index_2">
           <div class="icon green_union">
-            <img src="src/img/svg/pdf.svg" loading="lazy" alt="pdf" />
+            <img src="./src/img/svg/pdf.svg" loading="lazy" alt="pdf" />
           </div>
         </div>
-        <img class="workwith__expml-img" src="src/img/content_2.png" loading="lazy" alt="Формати підписів" />
+        <img class="workwith__expml-img" src="./src/img/content_2.png" loading="lazy" alt="Формати підписів" />
         <div class="subimage__wrapper index_3">
           <div class="icon">
-            <img src="src/img/svg/docs.svg" loading="lazy" alt="docs" />
+            <img src="./src/img/svg/docs.svg" loading="lazy" alt="docs" />
           </div>
         </div>
-        <img class="workwith__expml-img" src="src/img/content_3.png" loading="lazy"
+        <img class="workwith__expml-img" src="./src/img/content_3.png" loading="lazy"
           alt="Політики підписання та мітки підписів" />
         <div class="subimage__wrapper index_4">
           <div class="icon green_union">
-            <img src="src/img/svg/pdf.svg" loading="lazy" alt="pdf" />
+            <img src="./src/img/svg/pdf.svg" loading="lazy" alt="pdf" />
           </div>
           <div class="icon">
-            <img src="src/img/svg/docs.svg" loading="lazy" alt="docs" />
+            <img src="./src/img/svg/docs.svg" loading="lazy" alt="docs" />
           </div>
         </div>
-        <img class="workwith__expml-img" src="src/img/content_4.png" loading="lazy"
+        <img class="workwith__expml-img" src="./src/img/content_4.png" loading="lazy"
           alt="Робота з документами у «Арт-офіс Корпоративне рішення»" />
       </div>
     </div>
@@ -603,7 +772,7 @@
       <!-- <span onclick="openHelpModal()" class="workwith__btn"
           >Отримати консультацію</span
         > -->
-      <a href="src/files/Art-Office general description tech details.pdf" target="_blank" class="workwith__btn">Опис
+      <a href="./src/files/Art-Office general description tech details.pdf" target="_blank" class="workwith__btn">Опис
         функціональних можливостей
       </a>
     </div>
@@ -611,10 +780,10 @@
   <div class="security__section" id="security">
     <div class="security__wrapper dark__background">
       <div class="bg_items">
-        <img src="src/img/svg/clipboard_text.svg" loading="lazy" alt="clipboard_text" />
+        <img src="./src/img/svg/clipboard_text.svg" loading="lazy" alt="clipboard_text" />
       </div>
       <div class="bg_items lock_bg">
-        <img src="src/img/svg/lock.svg" loading="lazy" alt="lock" />
+        <img src="./src/img/svg/lock.svg" loading="lazy" alt="lock" />
       </div>
       <div class="section__name">
         <h2>Безпека</h2>
@@ -626,7 +795,7 @@
         <div class="line__progress">
           <div class="line__point">
             <span class="line__text"> Безпека найвищого рівня </span>
-            <img src="src/img/svg/point.svg" loading="lazy" alt="Безпека найвищого рівня" />
+            <img src="./src/img/svg/point.svg" loading="lazy" alt="Безпека найвищого рівня" />
           </div>
         </div>
       </div>
@@ -634,7 +803,7 @@
         <div class="security__item">
           <div class="content__title">
             <div class="content__icon">
-              <img src="src/img/svg/globe.svg" loading="lazy" alt="Безпека мережі" />
+              <img src="./src/img/svg/globe.svg" loading="lazy" alt="Безпека мережі" />
             </div>
             <h4>Безпека мережі</h4>
           </div>
@@ -655,7 +824,7 @@
         <div class="security__item">
           <div class="content__title">
             <div class="content__icon">
-              <img src="src/img/svg/card_holder.svg" loading="lazy" alt="Шифрування даних" />
+              <img src="./src/img/svg/card_holder.svg" loading="lazy" alt="Шифрування даних" />
             </div>
             <h4>Шифрування даних</h4>
           </div>
@@ -675,7 +844,7 @@
         <div class="security__item">
           <div class="content__title">
             <div class="content__icon">
-              <img src="src/img/svg/userfocus.svg" loading="lazy" alt="Захист інформації " />
+              <img src="./src/img/svg/userfocus.svg" loading="lazy" alt="Захист інформації " />
             </div>
             <h4>Захист інформації</h4>
           </div>
@@ -686,7 +855,7 @@
               результатами державної експертизи у галузі КЗІ.
             </li>
             <li class="content__list-item">
-              Експертні висновки на програмний засіб <a href="src/files/Арт ЛІБ_1.pdf" target="_blank">«Бібліотека
+              Експертні висновки на програмний засіб <a href="./src/files/Арт ЛІБ_1.pdf" target="_blank">«Бібліотека
                 криптографічних перетворень АРТ-ЛІБ»</a> , що
               використовуються для захисту інформації на серверній та клієнтській стороні (у веб-браузері)
             </li>
@@ -695,7 +864,7 @@
         <div class="security__item">
           <div class="content__title">
             <div class="content__icon">
-              <img src="src/img/svg/folder_lock.svg" loading="lazy" alt="Безпека акаунтів" />
+              <img src="./src/img/svg/folder_lock.svg" loading="lazy" alt="Безпека акаунтів" />
             </div>
             <h4>Безпека акаунтів</h4>
           </div>
@@ -713,7 +882,7 @@
         <div class="security__item">
           <div class="content__title">
             <div class="content__icon">
-              <img src="src/img/svg/ident_card.svg" loading="lazy" alt="Конфіденційність забезпечено" />
+              <img src="./src/img/svg/ident_card.svg" loading="lazy" alt="Конфіденційність забезпечено" />
             </div>
             <h4>Конфіденційність забезпечено</h4>
           </div>
@@ -743,16 +912,16 @@
     </h2>
     <div class="foruse__wrapper">
       <div class="bg_items">
-        <img src="src/img/svg/foruse_line.svg" loading="lazy" alt="foruse_line" />
+        <img src="./src/img/svg/foruse_line.svg" loading="lazy" alt="foruse_line" />
       </div>
       <div class="foruse__items">
         <div class="foruse__item">Телекомунікації</div>
         <div class="foruse__item icon blue_union">
-          <img src="src/img/svg/television.svg" loading="lazy" alt="television" />
+          <img src="./src/img/svg/television.svg" loading="lazy" alt="television" />
         </div>
         <div class="foruse__item transparen_bg">Логістичні компанії</div>
         <div class="foruse__item icon orange_union">
-          <img src="src/img/svg/truck.svg" loading="lazy" alt="truck" />
+          <img src="./src/img/svg/truck.svg" loading="lazy" alt="truck" />
         </div>
         <div class="foruse__item transparen_bg">Страхові компанії</div>
         <div class="foruse__item">Туристичні оператори</div>
@@ -760,16 +929,16 @@
         <div class="foruse__item transparen_bg">Ритейл</div>
         <div class="foruse__item transparen_bg">Орендодавці</div>
         <div class="foruse__item icon green_union">
-          <img src="src/img/svg/airplane.svg" loading="lazy" alt="airplane" />
+          <img src="./src/img/svg/airplane.svg" loading="lazy" alt="airplane" />
         </div>
         <div class="foruse__item">Консалтингові компанії</div>
         <div class="foruse__item transparen_bg">Аутсорсингові компанії</div>
         <div class="foruse__item icon blue_union">
-          <img src="src/img/svg/brackets.svg" loading="lazy" alt="brackets" />
+          <img src="./src/img/svg/brackets.svg" loading="lazy" alt="brackets" />
         </div>
         <div class="foruse__item transparen_bg">ІТ технології</div>
         <div class="foruse__item icon orange_union">
-          <img src="src/img/svg/gift.svg" loading="lazy" alt="gift" />
+          <img src="./src/img/svg/gift.svg" loading="lazy" alt="gift" />
         </div>
       </div>
     </div>
@@ -780,20 +949,20 @@
         <h2>про нас говорять</h2>
       </div>
       <h2 class="section__title dark_bc_color">
-        <img src="src/img/feedback_1.png" loading="lazy" alt="Відгуки клієнтів" />
-        <img src="src/img/feedback_2.png" loading="lazy" alt="Відгуки клієнтів" />
-        <img src="src/img/feedback_3.png" loading="lazy" alt="Відгуки клієнтів" />
-        <img src="src/img/svg/feedback_line.svg" loading="lazy" alt="Відгуки клієнтів" />
-        <img src="src/img/feedback_5.png" loading="lazy" alt="Відгуки клієнтів" />
-        <img src="src/img/feedback_6.png" loading="lazy" alt="Відгуки клієнтів" />
-        <img src="src/img/svg/feedback_line.svg" loading="lazy" alt="Відгуки клієнтів" />
-        <img src="src/img/feedback_like.png" loading="lazy" alt="Відгуки клієнтів" />
+        <img src="./src/img/feedback_1.png" loading="lazy" alt="Відгуки клієнтів" />
+        <img src="./src/img/feedback_2.png" loading="lazy" alt="Відгуки клієнтів" />
+        <img src="./src/img/feedback_3.png" loading="lazy" alt="Відгуки клієнтів" />
+        <img src="./src/img/svg/feedback_line.svg" loading="lazy" alt="Відгуки клієнтів" />
+        <img src="./src/img/feedback_5.png" loading="lazy" alt="Відгуки клієнтів" />
+        <img src="./src/img/feedback_6.png" loading="lazy" alt="Відгуки клієнтів" />
+        <img src="./src/img/svg/feedback_line.svg" loading="lazy" alt="Відгуки клієнтів" />
+        <img src="./src/img/feedback_like.png" loading="lazy" alt="Відгуки клієнтів" />
         <span class="italic">Відгуки </span>клієнтів
       </h2>
     </div>
     <div class="feedback_items">
       <div class="prev">
-        <img src="src/img/svg/arrow_rigth.svg" alt="Назад" />
+        <img src="./src/img/svg/arrow_rigth.svg" alt="Назад" />
       </div>
       <div class="slider single-item">
         <div class="feedback__item">
@@ -818,7 +987,7 @@
           <div class="bottom__content" onclick="openModal(0)">
             <span>Читати більше</span>
             <div class="more__btn">
-              <img src="src/img/svg/arrow_rigth.svg" alt="Читати більше" />
+              <img src="./src/img/svg/arrow_rigth.svg" alt="Читати більше" />
             </div>
           </div>
         </div>
@@ -844,7 +1013,7 @@
           <div class="bottom__content" onclick="openModal(1)">
             <span>Читати більше</span>
             <div class="more__btn">
-              <img src="src/img/svg/arrow_rigth.svg" alt="Читати більше" />
+              <img src="./src/img/svg/arrow_rigth.svg" alt="Читати більше" />
             </div>
           </div>
         </div>
@@ -870,7 +1039,7 @@
           <div class="bottom__content" onclick="openModal(2)">
             <span>Читати більше</span>
             <div class="more__btn">
-              <img src="src/img/svg/arrow_rigth.svg" alt="Читати більше" />
+              <img src="./src/img/svg/arrow_rigth.svg" alt="Читати більше" />
             </div>
           </div>
         </div>
@@ -896,7 +1065,7 @@
           <div class="bottom__content" onclick="openModal(3)">
             <span>Читати більше</span>
             <div class="more__btn">
-              <img src="src/img/svg/arrow_rigth.svg" alt="Читати більше" />
+              <img src="./src/img/svg/arrow_rigth.svg" alt="Читати більше" />
             </div>
           </div>
         </div>
@@ -922,23 +1091,23 @@
           <div class="bottom__content" onclick="openModal(4)">
             <span>Читати більше</span>
             <div class="more__btn">
-              <img src="src/img/svg/arrow_rigth.svg" alt="Читати більше" />
+              <img src="./src/img/svg/arrow_rigth.svg" alt="Читати більше" />
             </div>
           </div>
         </div>
       </div>
       <div class="next">
-        <img src="src/img/svg/arrow_rigth.svg" alt="Вперед" />
+        <img src="./src/img/svg/arrow_rigth.svg" alt="Вперед" />
       </div>
     </div>
   </div>
   <div class="try__section" id="try">
     <div class="try__wrapper dark__background">
       <div class="bg_items">
-        <img src="src/img/svg/try_left_content.svg" loading="lazy" alt="Це зручно і вигідно" />
+        <img src="./src/img/svg/try_left_content.svg" loading="lazy" alt="Це зручно і вигідно" />
       </div>
       <div class="bg_items">
-        <img src="src/img/svg/try_rigth_content.svg" loading="lazy" alt="Визнається державою" />
+        <img src="./src/img/svg/try_rigth_content.svg" loading="lazy" alt="Визнається державою" />
       </div>
       <h2 class="section__title dark_bc_color">
         Використовуйте <br />
@@ -953,7 +1122,7 @@
           > -->
       </div>
       <div class="demo">
-        <img src="src/img/demo.png" loading="lazy" alt="Приклад роботи з документами" />
+        <img src="./src/img/demo.png" loading="lazy" alt="Приклад роботи з документами" />
       </div>
     </div>
   </div>
@@ -963,130 +1132,12 @@
     </div>
     <div class="wrapper">
       <div class="achievements__content">
-        <div class="achievements__items">
-          <div class="section__name">
-            <h2>2025</h2>
-          </div>
-          <div class="achievements__year">
-            <div class="achievements__img"><img src="src/img/dcnc_26_v1.png" alt="Підприємство року 2025"
-                title="Підприємство року"></div>
-            <div class="achievements__img"><img src="src/img/dcnc_26_v2.png" alt="Підприємство року 2025"
-                title="Підприємство року"></div>
-          </div>
-        </div>
-        <div class="achievements__items">
-          <div class="section__name">
-            <h2>2024</h2>
-          </div>
-          <div class="achievements__year">
-            <div class="achievements__img"><img src="src/img/certificate_1.png" alt="Підприємство року 2024"
-                title="Підприємство року"></div>
-            <div class="achievements__img"><img src="src/img/certificate_2.png" alt="Підприємство року 2024"
-                title="Підприємство року"></div>
-          </div>
-        </div>
+        <div class="achievements__img"><img src="./src/img/certificate_1.png" alt="Підприємство року"
+            title="Підприємство року"></div>
+        <div class="achievements__img"><img src="./src/img/certificate_2.png" alt="Підприємство року"
+            title="Підприємство року"></div>
       </div>
     </div>
-  </div>
-  <div class="faq__section" id="faq">
-    <div class="section__name">
-      <h2> Найчастіші питання</h2>
-    </div>
-    <div class="wrapper">
-      <div class="section_faq-block">
-        <div class="section_faq-question">
-          <p>Що таке «електронний документ»?</p>
-
-          <div class="arrow">
-            <div>
-              <i class="fa-solid fa-arrow-up"></i>
-            </div>
-          </div>
-        </div>
-        <div class="section_faq-answer">
-          Відповідно до частини 1 статті 5 Закону України «Про електронні документи та електронний
-          документообіг» від 22 травня 2003 року № 851‑IV електронний документ – це документ, інформація в
-          якому зафіксована у вигляді електронних даних, включаючи обов’язкові реквізити документа. Частиною 1
-          статті 6 даного Закону встановлено, що накладанням електронного підпису завершується створення
-          електронного документа. Відповідно, одним з найважливіших реквізитів електронного документа, після
-          чого він отримує статус документа, є накладений на нього електронний підпис. З докладною інформацією
-          щодо юридичного статусу та застосування електронних документів в Україні, порядку надання податковим
-          органам електронних документів під час проведення перевірки та подання копій електронних документів
-          на запиті правоохоронних та органів що здійснюють контроль ви можете ознайомитись за наступним
-          посиланням: «<a href="https://my.art-office.com.ua/Content/libs/files/%d0%95%d0%bb%d0%b5%d0%ba%d1%82%d1%80%d0%be%d0%bd%d0%bd%d1%96%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8%20%D0%94%D0%BE%D0%B2%D1%96%D0%B4%D0%BA%D0%B0.pdf" target="_blank">Електронні
-            документи Довідка.pdf</a>»
-        </div>
-      </div>
-      <div class="section_faq-block">
-        <div class="section_faq-question">
-          <p>
-            Що відбудеться з КЕП, якими підписаний документ Арт‑Офіс, якщо контент електронного
-            документа
-            буде змінено або пошкоджено
-          </p>
-          <div class="arrow">
-            <div>
-              <i class="fa-solid fa-arrow-up"></i>
-            </div>
-          </div>
-        </div>
-        <div class="section_faq-answer">
-          Підписи КЕП, якими документ Арт‑Офіс був підписаний до зміни контенту, будуть видалені з
-          електронного документа або втратять чинність (валідність).
-        </div>
-      </div>
-      <div class="section_faq-block">
-        <div class="section_faq-question">
-          <p>
-            Чи можливо на програмному рівні для підписаного нами документа Арт‑Офіс установити строк,
-            упродовж
-            якого цей документ може бути підписаний контрагентом?
-          </p>
-          <div class="arrow">
-            <div>
-              <i class="fa-solid fa-arrow-up"></i>
-            </div>
-          </div>
-        </div>
-        <div class="section_faq-answer">
-          Так, указана перевірка може виконуватись на програмному рівні, якщо для створення електронного
-          документа вибрано відповідну спеціалізовану політику підписання документа.
-        </div>
-      </div>
-      <div class="section_faq-block">
-        <div class="section_faq-question">
-          <p>Як перевірити документ Арт-Офіс?</p>
-          <div class="arrow">
-            <div>
-              <i class="fa-solid fa-arrow-up"></i>
-            </div>
-          </div>
-        </div>
-        <div class="section_faq-answer">
-          <p>Чинність електронного документа Арт‑Офіс може бути перевірена наступними способами:</p>
-          <ul>
-            <li>На сторінці <a href="https://ca.masterkey.ua/poslugi/verify-sigdocs/" target="_blank">"Перевірка
-                підпису"</a></li>
-            <li>
-              За допомогою державних он-лайн сервісів перевірки КЕП на сайтах <a href="https://czo.gov.ua/verify"
-                target="_blank">Центрального засвідчувального органу</a> та <a href="https://ca.informjust.ua/verify"
-                target="_blank">Міністерства юстиції України</a>.
-              Детальний опис перевірки документа Арт-Офіс на вказаних сайтах містить <a
-                href="https://my.art-office.com.ua/Content/libs/files/dopomoga_z_perevirky_P7S.pdf" target="_blank">«Інструкція з перевірки
-                електронних документів на сайтах ЦЗО та Мін'юсту»</a>.
-            </li>
-            <li>
-              За допомогою комп'ютерної програми <a href="https://ca.masterkey.ua/product/art-crypto-plus/"
-                target="_blank">«Комплекс криптографічного захисту інформації «Арт-Крипто+»</a>.
-            </li>
-          </ul>
-          <p>
-            Перевірка чинності електронних документів Арт‑Офіс здійснюється у будь-який час і є безкоштовною.
-          </p>
-        </div>
-      </div>
-    </div>
-
   </div>
   <div class="contacts__section" id="contacts">
     <div class="left__content">
@@ -1105,7 +1156,7 @@
           <div class="contact__item-left">
             <div class="contact__item">
               <div class="item__icon">
-                <img src="src/img/svg/map_point.svg" loading="lazy" alt="Місце розташування" />
+                <img src="./src/img/svg/map_point.svg" loading="lazy" alt="Місце розташування" />
               </div>
               <div class="item__content">
                 03035, Україна, <br />
@@ -1117,7 +1168,7 @@
           <div class="contact__item-rigth">
             <div class="contact__item">
               <div class="item__icon">
-                <img src="src/img/svg/phone.svg" loading="lazy" alt="Контактні телефони" />
+                <img src="./src/img/svg/phone.svg" loading="lazy" alt="Контактні телефони" />
               </div>
               <div class="item__content">
                 <ul>
@@ -1135,7 +1186,7 @@
             </div>
             <div class="contact__item">
               <div class="item__icon">
-                <img src="src/img/svg/mail.svg" loading="lazy" alt="Email" />
+                <img src="./src/img/svg/mail.svg" loading="lazy" alt="Email" />
               </div>
               <div class="item__content">
                 <a href="mailto:sales_ao@art-office.com.ua">sales_ao@art-office.com.ua</a>
@@ -1154,7 +1205,92 @@
       </div>
     </div>
   </div>
-  <div data-include="src/partials/footer.html"></div>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__logo-rights">
+        <div class="footer__logo">
+          <img src="./src/img/svg/AO_logo.svg" alt="Арт-Офіс" loading="lazy" />
+        </div>
+        <div class="footer__rights">
+          © ТОВ «ДІСІЕНСІ», 2017-2025.
+          <br />
+          <br />
+          Усi права захищенi.
+          <br />
+          Розроблено в Україні
+        </div>
+      </div>
+      <nav class="footer__navigation">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-list__item">
+            <a href="#advantage">Переваги</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a href="#solution">Рішення</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a href="#corporation">Модулі</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a href="#licensing">Ліцензування</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a href="#workwith">Робота з документами</a>
+          </li>
+        </ul>
+        <ul class="footer-nav-list">
+          <li class="footer-nav-list__item">
+            <a href="#security">Безпека</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a href="#contacts">Контакти</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a href="./news.html">Новини</a>
+          </li>
+          <li class="footer-nav-list__item">
+            <a href="#achievements">Нагороди та сертифікати</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <h3 class="footer__social-title">Слідкуй за нами:</h3>
+        <div class="social-links">
+          <a href="https://t.me/art_office" target="_blank" class="social-link">
+            <i class="fa-brands fa-telegram"></i>
+          </a>
+          <a href="https://www.facebook.com/art.office.com.ua/" target="_blank" class="social-link">
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <a href="https://www.youtube.com/@Art-Office" target="_blank" class="social-link">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer__rights mob">
+        © ТОВ «ДІСІЕНСІ», 2017-2025.
+        <br />
+        <br />
+        Усi права захищенi.
+        <br />
+        Розроблено в Україні
+      </div>
+    </div>
+    <div class="footer__line"></div>
+    <div class="footer__wrapper policy">
+      <ul class="footer_links-policy">
+        <li class="footer_link-policy">
+          <a href="./policy/securitypolicy.html">Політика безпеки</a>
+        </li>
+        <li class="footer_link-policy">
+          <a href="./policy/privacypolicy.html">Політика конфіденційності</a>
+        </li>
+        <li class="footer_link-policy">
+          <a href="./policy/cookiespolicy.html">Політика Cookie</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
   <div id="modal">
     <div id="modal-content"></div>
     <div class="close-btn" onclick="closeModal()">&times;</div>
@@ -1174,12 +1310,9 @@
       <input value="Відправити" type="submit" class="submit-btn" />
     </form>
   </div>
-  <script src="src/js/jquery/jquery.min.js"></script>
-  <script src="src/js/slick/slick.min.js"></script>
-  <script src="src/js/include.js"></script>
-  <script src="src/js/header.js"></script>
-  <script src="src/js/footer.js"></script>
-  <script src="src/js/main.js"></script>
+  <script src="./src/js/jquery/jquery.min.js"></script>
+  <script src="./src/js/slick/slick.min.js"></script>
+  <script src="./src/js/main.js"></script>
 </body>
 
 </html>
