@@ -262,6 +262,26 @@ if (phoneInput) {
   );
 }
 
+document.querySelectorAll(".section_faq-question").forEach(question => {
+  question.addEventListener("click", () => {
+    const block = question.closest(".section_faq-block");
+    const answer = block.querySelector(".section_faq-answer");
+    const isActive = block.classList.contains("active");
+
+    // Закрываем все остальные блоки
+    document.querySelectorAll(".section_faq-block").forEach(b => {
+      b.classList.remove("active");
+      b.querySelector(".section_faq-answer").style.maxHeight = "0";
+    });
+
+    // Открываем текущий (если он не был открыт)
+    if (!isActive) {
+      block.classList.add("active");
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    }
+  });
+});
+
 // function getYear() {
 //     const date = new Date();
 //     return date.getFullYear();
